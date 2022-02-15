@@ -1,0 +1,48 @@
+<h1>Github Trending<button style="margin-left:800px;" class="button button1" (click)="logoutAction()">Logout</button></h1>
+<div class="topnav" id="myTopnav">
+
+	<a href="/portal/menu" class="active">Home</a>
+	<a href="/portal/news">News</a>
+	<a href="/portal/top-user-by-country">Top user by country</a>
+	<a href="/portal/top-repositories" >Top repositories</a>
+	<a href="/portal/data-visualize"> Data visualization</a>
+
+	<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+		<i class="fa fa-bars"></i>
+	</a>
+</div>
+ <tr>
+    <td> <input type="text" placeholder="Search" [(ngModel)]="name"></td>
+    <td><button (click)="searchData()">Search</button></td>
+  </tr>
+  <div style="background-color:gray">
+ 
+	<a href="/portal/menu" style="margin-right: 300px;font-size: 30px;">Users</a>
+	<a style="font-size: 30px;" href="/portal/repositories">Repositories</a>
+	
+</div>
+<table>
+	
+  
+  <tr >
+    <th>Full name</th>
+    <th>Name</th>
+    <!-- <th>Node id</th> -->
+    <th>Forks</th>
+    <th>Stargazers count</th>
+    <th>Score</th>
+  </tr>
+  <tr *ngFor="let item of dataFromApi">
+    <td>{{item.full_name}}</td>
+    <td>{{item.name}}</td>
+    <!-- <td>{{item.node_id}}</td> -->
+    <td>{{item.forks}}</td>
+    <td>{{item.stargazers_count}}</td>
+    <td>{{item.score}}</td>
+  </tr>
+  
+</table>
+<div class="navbar" id="myNavbar">
+	<p align="center"><b>Name:</b> Zaba Mubassarah</p>
+	<p align="center"><b>Email:</b> shanita.zeba@gmail.com</p>
+</div>

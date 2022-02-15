@@ -1,0 +1,17 @@
+
+<h1>Github Trending<button style="margin-left:800px;" class="button button1" (click)="logoutAction()">Logout</button></h1>
+<div class="topnav" id="myTopnav">
+
+  <a href="/portal/menu" >Home</a>
+  
+  <a href="/portal/top-user-by-country">Top user by country</a>
+  <a href="/portal/top-repositories">Top repositories</a>
+  <a href="/portal/data-visualize" class="active"> Data visualization</a>
+
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+<div width="200" height="200">
+  <canvas id="canvas">{{chart}}</canvas>
+</div>
